@@ -7,7 +7,7 @@ function comments(state = [] , action){
                 id: action.id,
                 text: action.text,
                 votes: 0
-            }, ...state.comments]
+            }, ...state]
     
     default:
         return state;        

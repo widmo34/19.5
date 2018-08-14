@@ -1,6 +1,6 @@
 import React from 'react';
-import Comment from 'Comment';
+import Comment from './Comment';
 
-const CommentsList = ({comments}) => <ul>{comments.map(comment => <Comment key={id} {...comment} /> )}</ul>
+const CommentsList = ({comments}) => <ul>{comments.map((comment, index) => <Comment key={index} {...comment} /> )}</ul>
 
 export default CommentsList;

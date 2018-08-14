@@ -2,7 +2,7 @@ import uuid from 'uuid';
 
 export const ADD_COMMENT = 'ADD_COMMENT';
 
-export function addComment(text) {
+function addComment(text) {
     return {
         type: ADD_COMMENT,
         text,
@@ -10,7 +10,7 @@ export function addComment(text) {
     }
 }
 
-
+export default addComment;
 
 
 
