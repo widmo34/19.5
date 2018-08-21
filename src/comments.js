@@ -16,20 +16,20 @@ function comments(state = [], action){
                             id: action.id,
                             text: action.text,
                             votes: action.votes
-                    }, ...state.comments
+                    }, ...state
             ]
 
 
         case REMOVE_COMMENT:
             return{
-               comments: state.comments.filter(comment => comment.id !== action.id)
+               comments: state.filter(comment => comment.id !== action.id)
             } 
            
             
 
         case EDIT_COMMENT:
             return  {
-                comments:  state.comments.map(comment => {
+                comments:  state.map(comment => {
                 if(comment.id === action.id){
                     comment.text = action.text
                 } 
@@ -39,7 +39,7 @@ function comments(state = [], action){
         
         case THUMB_UP_COMMENT:  
             return {
-                comments:  state.comments.map(comment => {
+                comments:  state.map(comment => {
                 if(comment.id === action.id){
                     comment.votes += 1;
                 } 
@@ -49,7 +49,7 @@ function comments(state = [], action){
 
         case THUMB_DOWN_COMMENT:  
             return  {
-                comments:  state.comments.map(comment => {
+                comments:  state.map(comment => {
                 if(comment.id === action.id){
                     comment.votes -= 1;
                 } 

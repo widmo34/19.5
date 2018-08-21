@@ -6,6 +6,8 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
+
+
 function removeComment(id){
     return{
         type: REMOVE_COMMENT,
@@ -49,4 +51,4 @@ function thumbDownComment(id){
     }
 }
 
-export default {removeComment, addComment, editComment, thumbUpComment, thumbDownComment   }
+export default { removeComment, addComment, editComment, thumbUpComment, thumbDownComment  }
